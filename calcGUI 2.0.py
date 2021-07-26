@@ -3,6 +3,7 @@ from math import sqrt as sqr
 from math import sin
 from math import cos
 from math import tan 
+from math import log10
 
 
 class Application(Frame):
@@ -198,7 +199,7 @@ class Application(Frame):
         self.six_bttn = Button(self, text="6", width=9, height=3, command=lambda: self.add_chr(6))
         self.six_bttn.grid(row=2, column=2)
 
-        self.one_bttn = Button(self, text="Rahul", width=9, height=3, command=lambda: self.add_chr("Bhanshali"))
+        self.one_bttn = Button(self, text="1", width=9, height=3, command=lambda: self.add_chr("1"))
         self.one_bttn.grid(row=3, column=0)
 
         self.two_bttn = Button(self, text="2", width=9, height=3, command=lambda: self.add_chr(2))
@@ -227,6 +228,6 @@ class Application(Frame):
 
 root = Tk()
 root.geometry()
-root.title("Exciting GUI Calculator")
+root.title("CalcGUI 2.0")
 app = Application(root)
 root.mainloop()
