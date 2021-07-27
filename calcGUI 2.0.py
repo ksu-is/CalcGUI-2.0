@@ -4,6 +4,8 @@ from math import sin
 from math import cos
 from math import tan 
 from math import log10
+from math import sinh
+from math import e
 
 
 class Application(Frame):
@@ -130,7 +132,7 @@ class Application(Frame):
         master.bind("4", lambda event, char="4", btn=self.four_bttn: self.add_chr(char, btn))
         master.bind("3", lambda event, char="3", btn=self.three_bttn: self.add_chr(char, btn))
         master.bind("2", lambda event, char="2", btn=self.two_bttn: self.add_chr(char, btn))
-        master.bind("1", lambda event, char="RB", btn=self.one_bttn: self.add_chr(char, btn))
+        master.bind("1", lambda event, char="1", btn=self.one_bttn: self.add_chr(char, btn))
         master.bind("0", lambda event, char="0", btn=self.zero_bttn: self.add_chr(char, btn))
         master.bind("*", lambda event, char="×", btn=self.mult_bttn: self.add_chr(char, btn))
         master.bind("/", lambda event, char="÷", btn=self.div_bttn: self.add_chr(char, btn))
@@ -148,16 +150,19 @@ class Application(Frame):
         Creates the widgets to be used in the grid.
         :return: None
         """
-        self.sin_bttn = Button(self, text="sin", width=20, height=3, command=lambda: self.add_chr('sin'))
-        self.sin_bttn.grid(row=2, column=6)
+        self.pi_bttn = Button(self, text="Pi", width=9, height=3, command=lambda: self.add_chr('Pi'))
+        self.sin_bttn.grid(row=2, column=6, columnspan=2)
+        
+        self.sin_bttn = Button(self, text="sin", width=9, height=3, command=lambda: self.add_chr('sin'))
+        self.sin_bttn.grid(row=2, column=6, columnspan=2)
 
-        self.sin_bttn = Button(self, text="cosin", width=20, height=3, command=lambda: self.add_chr('cosin'))
-        self.sin_bttn.grid(row=3, column=6)
+        self.cosin_bttn = Button(self, text="cosin", width=9, height=3, command=lambda: self.add_chr('cosin'))
+        self.cosin_bttn.grid(row=3, column=6, columnspan=2)
 
-        self.sin_bttn = Button(self, text="tan", width=20, height=3, command=lambda: self.add_chr('tan'))
-        self.sin_bttn.grid(row=4, column=6)
+        self.tan_bttn = Button(self, text="tan", width=9, height=3, command=lambda: self.add_chr('tan'))
+        self.tan_bttn.grid(row=4, column=6, columnspan=2)
 
-        self.eq_bttn = Button(self, text="=", width=20, height=3, bg="lightgrey", command=lambda: self.calculate())
+        self.eq_bttn = Button(self, text="=", width=20, height=3, bg="blue", command=lambda: self.calculate())
         self.eq_bttn.grid(row=4, column=4, columnspan=2)
 
         self.ac_bttn = Button(self, text='CE', width=9, height=3, command=lambda: self.clear_all())
