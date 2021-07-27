@@ -7,7 +7,7 @@ from math import log10
 from math import sinh
 from math import cosh
 from math import tanh
-from math import e
+from math import pi 
 
 
 class Application(Frame):
