@@ -14,4 +14,4 @@
 - [X] Test that each function works in multiple different scenarios including using multiple in one line
 
 ## Sprint 3 (Presentation):
-- [] Record gif of CalcGUI 2.0 in action demonstrating that new functionality works #Adjusted this over as it's a visual aid and coincides with the third task in Sprint 2
+- [X] Record gif of CalcGUI 2.0 in action demonstrating that new functionality works #Adjusted this over as it's a visual aid and coincides with the third task in Sprint 2
